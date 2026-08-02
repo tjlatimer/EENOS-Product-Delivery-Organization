@@ -5,7 +5,7 @@
 **Status:** Approved  
 **Document Owner:** Roadmap Manager  
 **Approval Authority:** Tony  
-**Approval Source:** Recorded Tony approval of the Product Roadmap onboarding proposal dated 2026-08-02  
+**Approval Source:** Recorded Tony approval of the consolidated Product Roadmap onboarding proposal dated 2026-08-02  
 **Last Updated:** 2026-08-02
 
 ---
@@ -18,9 +18,13 @@ Defines approved folder-specific requirements for:
 200-roadmap/current/
 ```
 
-This specification supplements the `200-roadmap` section of the approved Folder Structure Specification.
+This specification implements folder-specific controls under the approved `200-roadmap` requirements established by:
 
-It does not redefine the authority, ownership, purpose, permitted content, or prohibited content established by that standard.
+- `000-standards/005-Folder-Structure-Specification.md`
+
+It does not approve, supersede, or change the status of:
+
+- `200-roadmap/SPECIFICATION.md`
 
 ---
 
@@ -32,9 +36,8 @@ This folder is governed by:
 - `000-standards/005-Folder-Structure-Specification.md`
 - `000-standards/006-Naming-Standard.md`
 - `000-standards/007-Metadata-Standard.md`
-- `200-roadmap/SPECIFICATION.md`
 
-The `200-roadmap` section of the Folder Structure Specification controls if a conflict exists.
+The `200-roadmap` section of STD-005 controls if a conflict exists.
 
 ---
 
@@ -46,7 +49,25 @@ The owning role is:
 Roadmap Manager
 ```
 
-Ownership identifies maintenance responsibility and does not grant implementation, approval, repository modification, or merge authority.
+Ownership identifies maintenance responsibility. It does not grant implementation, repository modification, approval, or merge authority.
+
+---
+
+# Required Files
+
+This folder shall contain:
+
+- `README.md`
+- `SPECIFICATION.md`
+- One authoritative current Product Roadmap
+
+The initial authoritative Product Roadmap is:
+
+```text
+001-EENOS-Product-Roadmap.md
+```
+
+The `.gitkeep` placeholder shall be removed after the required files are added.
 
 ---
 
@@ -68,14 +89,15 @@ This folder shall not contain:
 - Duplicate authoritative Product Roadmaps.
 - Individual backlog records.
 - Completed roadmap records.
-- Milestone records maintained as separate artifacts.
-- Release plans maintained as separate artifacts.
+- Separately maintained milestone records.
+- Separately maintained release plans.
 - Repository audit evidence.
 - Repository Change Requests.
 - Task Packages.
 - Product source code.
 - Implementation workspaces.
 - Unapproved structural artifacts.
+- An obsolete `.gitkeep` after governed content is present.
 
 ---
 
@@ -88,7 +110,7 @@ The authoritative current Product Roadmap shall:
 3. Use an approved lifecycle status.
 4. Identify the Roadmap Manager as Document Owner.
 5. Identify Approval Authority.
-6. identify a traceable Approval Source.
+6. Identify a traceable Approval Source.
 7. Identify its Last Updated date.
 8. Follow the approved governed-document naming convention.
 9. Preserve existing roadmap-item identifiers.
@@ -105,18 +127,26 @@ The Product Roadmap shall use:
 NNN-Document-Name.md
 ```
 
-The initial approved Product Roadmap filename is:
+The initial approved filename is:
 
 ```text
 001-EENOS-Product-Roadmap.md
 ```
 
-Structural files retain the filenames required by the Folder Structure Specification:
+The structural filenames required by STD-005 are:
 
 ```text
 README.md
 SPECIFICATION.md
 ```
+
+---
+
+# Metadata
+
+Governed Markdown documents in this folder shall place STD-007 metadata directly beneath the document title using bold Markdown fields.
+
+YAML front matter is not required by STD-007 and shall not replace the required field format.
 
 ---
 
@@ -141,22 +171,26 @@ Repository validation shall verify:
 
 - `README.md` exists.
 - `SPECIFICATION.md` exists.
+- The `.gitkeep` placeholder has been removed.
 - Exactly one authoritative current Product Roadmap exists.
 - The Product Roadmap filename is compliant.
 - Mandatory metadata is present.
-- The Document ID is unique.
-- Version format is valid.
-- Status is an approved value.
+- Document IDs are unique.
+- Version formats are valid.
+- Status values are approved.
 - Approval evidence is present.
 - Internal Markdown links are valid.
 - No prohibited artifacts are present.
 - No duplicate authoritative roadmap exists.
+- The parent draft specification is not represented as approved.
 
 ---
 
 # Structural Changes
 
-No additional subfolder may be created under this location without authorization required by the Folder Structure Specification and Repository Change Request Policy.
+The approved STD-005 structure already identifies `current/` as an authorized `200-roadmap` subfolder.
+
+No additional subfolder may be created under this location without the authorization required by the Folder Structure Specification and Repository Change Request Policy.
 
 ---
 

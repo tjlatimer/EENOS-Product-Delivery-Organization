@@ -5,7 +5,7 @@
 **Status:** Approved  
 **Document Owner:** Roadmap Manager  
 **Approval Authority:** Tony  
-**Approval Source:** Recorded Tony approval of the Product Roadmap onboarding proposal dated 2026-08-02  
+**Approval Source:** Recorded Tony approval of the consolidated Product Roadmap onboarding proposal dated 2026-08-02  
 **Last Updated:** 2026-08-02  
 **Created:** 2026-07-13  
 **Scope:** EENOS operating model, workflow improvements, runtime improvements, governance refinements, and future enhancements

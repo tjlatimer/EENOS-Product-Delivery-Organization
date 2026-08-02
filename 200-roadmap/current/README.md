@@ -5,7 +5,7 @@
 **Status:** Approved  
 **Document Owner:** Roadmap Manager  
 **Approval Authority:** Tony  
-**Approval Source:** Recorded Tony approval of the Product Roadmap onboarding proposal dated 2026-08-02  
+**Approval Source:** Recorded Tony approval of the consolidated Product Roadmap onboarding proposal dated 2026-08-02  
 **Last Updated:** 2026-08-02
 
 ---
@@ -16,11 +16,13 @@ Provides local navigation and identifies the authoritative current Product Roadm
 
 This folder is governed by:
 
+- `000-standards/004-Repository-Standards.md`
 - `000-standards/005-Folder-Structure-Specification.md`
 - `000-standards/006-Naming-Standard.md`
 - `000-standards/007-Metadata-Standard.md`
-- `200-roadmap/SPECIFICATION.md`
 - `200-roadmap/current/SPECIFICATION.md`
+
+The parent `200-roadmap/SPECIFICATION.md` is a related draft artifact and is not represented here as approved authority.
 
 ---
 
@@ -36,7 +38,11 @@ Only one authoritative current Product Roadmap shall exist in this folder.
 
 # Placement
 
-This folder contains the current approved Product Roadmap and directly related current-roadmap navigation artifacts.
+This folder contains:
+
+- The authoritative current Product Roadmap.
+- This navigation document.
+- The folder-specific `SPECIFICATION.md`.
 
 Backlog items belong in:
 
