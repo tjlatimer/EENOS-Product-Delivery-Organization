@@ -1,11 +1,11 @@
 # EENOS Product Roadmap
 
 **Document ID:** RM-000  
-**Version:** 1.0.0  
-**Status:** Approved  
+**Version:** 1.1.0  
+**Status:** In Review  
 **Document Owner:** Roadmap Manager  
 **Approval Authority:** Tony  
-**Approval Source:** Recorded Tony approval of the consolidated Product Roadmap onboarding proposal dated 2026-08-02  
+**Approval Source:** Pending review of Pull Request #13; roadmap reconciliation authorized by Tony on 2026-08-02  
 **Last Updated:** 2026-08-02  
 **Created:** 2026-07-13  
 **Scope:** EENOS operating model, workflow improvements, runtime improvements, governance refinements, and future enhancements
@@ -32,25 +32,31 @@ The Review Queue, when used, remains the place for formal proposals and approval
 
 ## Release Focus
 
-### Immediate Release Gate
+### Immediate Release Gate — Remaining
 
 - RM-001 - Persistent Scene Development Record (SDR)
 - RM-002 - SDR Recovery Header
 - RM-003 - Deterministic SDR save triggers
 - RM-004 - Silent SDR updates and manual save commands
 - RM-005 - SDR Runtime Compliance reporting
-- RM-006 - Destructive SDR recovery test
-- RM-011 - Operational Mode Menu Definitions validation
-- RM-012 - Runtime Artifact Synchronization validation
 - RM-014 - Single Source of Truth for Session Startup validation
 
-### Operational Baseline
+### Validated or Operational Baseline
 
+- RM-006 - Destructive SDR Recovery Test
 - RM-007 - Runtime Checkpointing and Version History
 - RM-008 - Runtime Recovery and Session Resume
 - RM-010 - AI Runtime Startup Manager
+- RM-011 - Operational Mode Menu Definitions
+- RM-012 - Runtime Artifact Synchronization
 - RM-016 - Platform-Neutral Scene Development Record Lifecycle
 - RM-017 - AI Capability Schema minimum slice
+- RM-026 - Relocate EENOS Development Workspace to H Drive
+
+### Implemented Work Requiring Acceptance Reconciliation
+
+- RM-024 - Story Architecture
+- RM-025 - Governed Character Identity Contract
 
 ### Next Release
 
@@ -66,7 +72,6 @@ The Review Queue, when used, remains the place for formal proposals and approval
 - RM-020 - Structured Revision Framework
 - RM-021 - Layered Drafting Pipeline
 - RM-023 - Recovery Fidelity Evaluation and Audit
-- RM-025 - Governed Character Identity Contract
 
 ## Roadmap vs Review Queue
 
@@ -131,7 +136,7 @@ Do not interrupt creative flow for minor remarks unless the statement clearly id
 
 | ID | Title | Priority | Type | Area | Description | Status | Discovered | Discovered During | Requested By | Target Release | Proposal / Reference | Notes |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| RM-001 | Persistent Scene Development Record | Critical | Critical | Story Development | Persistent Scene Development Record (SDR) so scene work survives AI context loss. | Testing | 2026-07-12 | Chapter 1 Scene 1 recovery discussion | Tony | v1.1 | `STD_Scene_Development_Record_v1.0.md` | Validate through real Chapter 1 use. |
+| RM-001 | Persistent Scene Development Record | Critical | Critical | Story Development | Persistent Scene Development Record (SDR) so scene work survives AI context loss. | Testing | 2026-07-12 | Chapter 1 Scene 1 recovery discussion | Tony | v1.1 | `STD_Scene_Development_Record_v1.0.md`; `STD_Scene_Development_Record_v1.1.md`; `98_Workflow/Reports/REPORT_EENOS_Implementation_Status_Reconciliation_2026-07-25.md` | Highest-priority ready roadmap item. Perform consolidated operational validation with RM-002 through RM-005 using real Scene Development evidence. Dependencies: RM-002 recovery header, RM-003 deterministic save triggers, RM-004 automatic/manual save commands, RM-005 compliance reporting, RM-006 validated recovery, and RM-016 validated platform-neutral SDR lifecycle. |
 | RM-002 | SDR Recovery Header | Critical | Critical | Runtime | Recovery header for SDRs so fresh AI sessions can resume without user re-explanation. | Testing | 2026-07-12 | SDR recovery hardening | Tony | v1.1 | `STD_Scene_Development_Record_v1.0.md` | Added to active Scene 01 SDR. |
 | RM-003 | Deterministic SDR Save Triggers | High | Minor | Runtime | Deterministic SDR save triggers instead of subjective breakthrough detection. | Testing | 2026-07-12 | SDR save-rule refinement | Tony | v1.1 | `STD_AI_Claude_Runtime_v1.0.md` | Save triggers are event-based. |
 | RM-004 | Silent SDR Updates and Manual Commands | High | Minor | Runtime | Silent automatic SDR updates plus manual `Checkpoint SDR` and `Save SDR Now` commands. | Testing | 2026-07-13 | SDR operation refinement | Tony | v1.1 | `STD_AI_Claude_Runtime_v1.0.md` | Manual commands are safety valves. |
@@ -154,8 +159,20 @@ Do not interrupt creative flow for minor remarks unless the statement clearly id
 | RM-021 | Layered Drafting Pipeline | Medium-High | Major | Story Intelligence and Author Workflow | Organize story development and drafting into configurable, checkpointed layers with explicit transitions, protected decisions, unresolved-question handling, and author approval. | Proposal | 2026-07-21 | Story Intelligence and author-workflow roadmap planning | Tony | Future | RM-020; RM-016; RM-007; RM-008; RM-010; RM-017; Writers Room structure-only governance; canon promotion and approval rules | Optional and provider-neutral; direct drafting and skipped layers remain available, and structure-only modes do not produce prose without authorization. |
 | RM-022 | Ollama Local Model Provider Integration | Medium | Major | AI Runtime / Provider Integration | Allow EENOS to detect, validate, select, and use locally hosted Ollama models through the provider-neutral runtime. | Discovered | 2026-07-20 | Product roadmap review and local-model provider planning | Tony | Post-v0.1.0; after SDR release gate | RM-017; RM-010; related: RM-015, RM-012, RM-008 | Renumbered from RM-018 on 2026-07-21 to resolve an ID collision with the Story Intelligence initiative. Minimum viable scope: configurable endpoint; health and availability detection; installed-model discovery; model selection; RM-017 capability reporting; RM-010 startup validation; explicit unavailable, degraded, and blocking outcomes; provider and model identity in the Session Header; timeout and connection-failure handling; no silent provider fallback; mocked tests without Ollama; and controlled tests against a real local installation. Completion requires deterministic reachability and model enumeration, an RM-017-compliant capability record, governed RM-010 start/block behavior, session records containing provider/model/endpoint class/check time, governed connection-loss handling, and passing automated and controlled tests. Later scope: model-specific capability profiles, context-window management, embeddings, streaming, performance and quality comparisons, automated provider selection, local-model recovery, and RM-015 writer-profile injection. |
 | RM-023 | Recovery Fidelity Evaluation and Audit | Medium | Major | Runtime / Recovery | Define a provider-neutral framework that evaluates reconstruction quality and records recovery audit findings after externally verified session freshness, without changing the RM-006 binary destructive-recovery gate. | Discovered | 2026-07-21 | RM-006 Codex cold-reconstruction comparison and recovery-quality review | Tony | Future | RM-006; RM-007; RM-008; RM-010; RM-016; RM-017 | Separates Recovery Gate pass/fail, quantitative Recovery Fidelity, and independent Recovery Audit. Audit findings do not contribute to the fidelity score. No formal specification or implementation artifacts yet. |
+| RM-024 | Story Architecture | High | Major | Story Architecture | Provide governed Story Architecture authoring, exact-reference persistence, guided Runtime operation, recovery, approval separation, Writers Room handoff, and explicit Canon operations. | Testing | 2026-07-22 | Approved RM-024 specification and implementation planning baseline | Tony | Current Story Architecture baseline | `98_Workflow/AI_Runtime/PLAN_RM-024_Implementation_Roadmap_v0.1.md`; `98_Workflow/Reports/REPORT_EENOS_Implementation_Status_Reconciliation_2026-07-25.md` | Current evidence records implemented guided authoring, exact-reference checkpoint and recovery, live Runtime integration, Writers Room handoff, semantic approval, Canon promotion, physical Canon lifecycle, and 310 passing regression tests. Completion or activation beyond recorded boundaries is not inferred; owner acceptance reconciliation remains required. |
 | RM-025 | Governed Character Identity Contract | High | Major | Story Architecture / Character Identity | Govern character identity so Story Architecture records can reference the same character deterministically across names, aliases, versions, and story scopes. | Implemented | 2026-07-24 | Character Arc authoring exposed the missing persisted identity authority | Tony | Current Story Architecture baseline | `tools/story_architecture/character_arc.py`; `tools/story_architecture/authoring.py`; Character Identity tests | Immutable aliases and name changes, retirement, atomic merge/split lineage, exact linked-scope identities, ambiguity detection, and rejection of stale or inactive prospective references are implemented. Identity remains separate from mutable character facts, semantic approval, Canon, Character Arcs, and Narrative Threads. |
-| RM-026 | Relocate EENOS Development Workspace to H Drive | Critical | Technical Debt | Development Infrastructure | Move EENOS development work, source files, tests, local development repositories, generated development artifacts, and development configuration off the operating-system C drive and establish `H:\Development\EENOS` as the authoritative development root. | Validated — Interface Cutover Pending | 2026-07-25 | Current-state reconciliation and owner storage policy | Tony | Current baseline | `98_Workflow/Reports/REPORT_RM-026_Workspace_Relocation_Validation_2026-07-25.md` | The active workspace, dirty Git state, and untracked records were copied to H and hash-verified. The prior unrelated H repository and complete pre-migration copies of both trees are retained. Tests: 310 passed from H. RM-012: PASS. Startup, checkpoint, and recovery passed from H. The remaining cutover action is to open `H:\Development\EENOS` as the Codex workspace; deletion of C remains separately authorized. |
+| RM-026 | Relocate EENOS Development Workspace to H Drive | Critical | Technical Debt | Development Infrastructure | Move EENOS development work, source files, tests, local development repositories, generated development artifacts, and development configuration off the operating-system C drive and establish `H:\Development\EENOS` as the authoritative development root. | Validated | 2026-07-25 | Current-state reconciliation and owner storage policy | Tony | Current baseline | `98_Workflow/Reports/REPORT_RM-026_Workspace_Relocation_Validation_2026-07-25.md` | The active workspace, dirty Git state, and untracked records were copied to H and hash-verified. The active Codex workspace is now `H:\Development\EENOS`, completing the recorded interface cutover. Tests: 310 passed from H. RM-012, startup, checkpoint, and recovery validation passed from H. The retained C workspace and deletion decision remain outside the validated relocation requirement. |
+
+## Current Recommendation
+
+### RM-001 — Persistent Scene Development Record
+
+- **Priority:** Critical
+- **Current status:** Testing
+- **Readiness:** Ready for consolidated operational validation
+- **Dependencies:** RM-002 recovery header; RM-003 deterministic save triggers; RM-004 silent automatic updates and manual save commands; RM-005 Session Review compliance reporting; RM-006 validated destructive recovery; RM-016 validated platform-neutral SDR lifecycle; current SDR and Runtime standards.
+- **Why this comes next:** RM-001 is the highest-priority unfinished item in the immediate release gate. Its implementation dependencies exist, its governance dependency is validated, and the remaining work is evidence collection and closure rather than new implementation. Closing RM-001 through the consolidated RM-001–RM-005 validation removes the oldest critical release-gate uncertainty before lower-priority future initiatives proceed.
+- **Genuine blocker:** None identified for beginning validation. Final closure depends on collecting representative real-use Scene Development and Session Review evidence for RM-001 through RM-005.
 
 ## Runtime / Recovery Future Capabilities
 
@@ -312,3 +329,4 @@ Use this template for new items:
 | 2026-07-21 | Corrected CR-002 invalid-mode handling, synchronized Claude runtime v1.1 development and vault copies, revalidated RM-011 at 9/9 PASS, and promoted RM-011 to Validated. | Tony |
 | 2026-07-24 | Added RM-025 Governed Character Identity Contract after Character Arc implementation exposed the need for deterministic identity across aliases, versions, scopes, and downstream Story Architecture records. | Tony |
 | 2026-07-25 | Added RM-026 to relocate all EENOS development work from the operating-system C drive to `H:\Development\EENOS` before creating the next controlled baseline. Planning only; no files moved. | Tony |
+| 2026-08-02 | Reconciled release-gate status against current implementation evidence, restored existing RM-024 to the master roadmap, marked RM-026 Validated after H-drive interface cutover, and selected RM-001 as the highest-priority ready validation item. | Roadmap Manager |
