@@ -196,6 +196,8 @@ Governed Markdown documents are exempt from the lowercase default and shall foll
 
 Additional prefixes require approval before use.
 
+**Clarifying Note (RCR-002, approved by Tony 2026-08-04):** Task Packages and per-roadmap-item delivery-workspace artifacts (e.g., Acceptance Test Plans) are outside the Document ID / Reserved Prefix regime defined in this section. Task Packages are identified by Task ID (STD-002). Per-roadmap-item delivery-workspace files are identified by their roadmap-item-scoped path (STD-005). No Reserved Prefix is assigned to these artifact types.
+
 ---
 
 # Rules
