@@ -1,7 +1,7 @@
 # Repository Contract — Software Repository (eenos-software-development)
 
 **Document ID:** RC-006
-**Version:** 1.0.0
+**Version:** 1.0.1
 **Status:** Approved — operational
 **Document Owner:** Repository Steward
 **Approval Authority:** Tony
@@ -22,7 +22,7 @@ Every existing Repository Contract (RC-001–RC-005) governs a location *inside*
 |---|---|
 | Contract ID | RC-006 |
 | Repository Path | GitHub: `tjlatimer/eenos-software-development` (all branches); Local development root: `H:\Development\EENOS`, per RM-026 (Validated — Interface Cutover Pending) |
-| Version | 1.0.0 |
+| Version | 1.0.1 |
 | Status | Approved — operational |
 
 ## 2. Ownership
@@ -92,4 +92,5 @@ None at this time.
 
 | Version | Date | Change |
 |---|---|---|
-| 1.0.0 | 2026-08-06 | Initial contract prepared by Repository Steward, independently reviewed under RCR-003, and approved directly by Tony. |
+| 1.0.0 (Draft) | 2026-08-06 | Initial draft prepared by Repository Steward to resolve the RM-027 blocking gap identified in the RM-027 Repository Contract and Target Branch Exception Package. Not yet reviewed or approved. |
+| 1.0.1 | 2026-08-06 | Organization Model Consultant independent review completed (Recommend Approval, no blocking revisions). Applied the one optional wording revision to Section 3 so the merge-authority sentence no longer cites GOV-005 as current authority for a repository GOV-005 does not yet name. Tony approval recorded. Status moved to Approved and the contract was made operational by Repository Committer publication. |
