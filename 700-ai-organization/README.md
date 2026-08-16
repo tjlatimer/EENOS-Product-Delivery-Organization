@@ -1,6 +1,6 @@
 # 700-ai-organization
 
-**Owner:** Architecture Lead
+**Owner:** Product Delivery Organization
 
 ## Purpose
 
