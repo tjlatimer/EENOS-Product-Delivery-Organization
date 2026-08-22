@@ -1,9 +1,12 @@
 # Repository Change Request Policy
 
-**Document ID:** GOV-006  
-**Version:** 1.0.1  
-**Status:** Approved  
+**Document ID:** GOV-006
+**Version:** 1.1.0
+**Status:** Approved
 **Document Owner:** Product Delivery Organization
+**Approval Authority:** Tony
+**Approval Source:** Recorded Tony approval — step 2 performed directly by Tony, 2026-08-22 (this amendment's own bootstrapping case); Organization Model Consultant independent review completed, Recommend Approval; final Tony approval recorded 2026-08-22.
+**Last Updated:** 2026-08-22
 
 ---
 
@@ -79,6 +82,8 @@ Every Repository Change Request shall include:
 4. Approval Authority approves or rejects the Repository Change Request.
 5. Approved Repository Change Requests shall be referenced by any resulting Task Package as the Approval Source.
 
+**Exception — Requestor is the Repository Steward:** When the Requestor of a Repository Change Request is the Repository Steward — including any Repository Change Request amending a Repository Contract the Repository Steward owns — Tony shall personally perform step 2 directly, in place of the Repository Steward, before Organization Model Consultant independent review proceeds. The Repository Change Request's Approval Status field shall record that this exception applied.
+
 ---
 
 # Outcomes
@@ -95,7 +100,7 @@ Implementation shall then proceed through the Artifact Lifecycle.
 
 The Repository Change Request is returned to the Requestor for revision.
 
-After revision, it shall be resubmitted beginning with Repository Steward review.
+After revision, it shall be resubmitted beginning with Repository Steward review (or, when the step-2 exception above applies, with Tony's direct review).
 
 ---
 
@@ -132,6 +137,7 @@ That Task Package then enters the Artifact Lifecycle beginning at the Author sta
 - Review repository impact.
 - Verify repository compliance.
 - Recommend approval, revision, or rejection.
+- When Requestor, stand aside for Tony's direct step-2 review per the Approval Workflow exception above.
 
 ---
 
@@ -147,6 +153,7 @@ That Task Package then enters the Artifact Lifecycle beginning at the Author sta
 
 - Approve or reject the Repository Change Request.
 - Authorize implementation.
+- Perform the Repository Steward's step-2 review directly when Repository Steward is the Requestor.
 
 ---
 
@@ -157,6 +164,7 @@ That Task Package then enters the Artifact Lifecycle beginning at the Author sta
 3. Every approved Repository Change Request shall be traceable.
 4. Repository Change Requests become part of the permanent repository history.
 5. Repository Change Requests do not replace the Artifact Lifecycle; they authorize it when implementation is required.
+6. When the Requestor is the Repository Steward, step 2 is performed by Tony directly, not waived.
 
 ---
 
@@ -165,3 +173,12 @@ That Task Package then enters the Artifact Lifecycle beginning at the Author sta
 Every repository structural or governance change is documented, independently reviewed, approved, and traceable.
 
 Every approved Repository Change Request can be traced to the Task Package that implements it.
+
+---
+
+# Revision History
+
+| Version | Date | Change |
+|---|---|---|
+| 1.0.1 | (pre-existing) | Prior approved baseline. |
+| 1.1.0 | 2026-08-22 | Added the Requestor-is-Repository-Steward step-2 exception (Tony performs step 2 directly) to close a recurring self-review gap identified across RCR-004, RCR-005, and RCR-006. Repository Steward drafted; Tony performed step 2 directly on this item as the bootstrapping case; OMC independent review Recommend Approval; Tony final approval recorded 2026-08-22. |
