@@ -1,12 +1,12 @@
 # EENOS Product Roadmap
 
 **Document ID:** RM-000  
-**Version:** 1.7.0
+**Version:** 1.8.0
 **Status:** Approved  
 **Document Owner:** Roadmap Manager  
 **Approval Authority:** Tony  
-**Approval Source:** Pull Request #13 merged by Tony on 2026-08-02; RM-024 priority and dependency order approved by Tony on 2026-08-04; RM-027 approved by Tony on 2026-08-04; RM-001–RM-005 closeout authorized and accepted by Tony on 2026-08-04; RM-014 closure and RM-024 evidence acceptance directed by Tony on 2026-08-05; RM-025 validation execution approved by Tony, PASS evidence returned, and Validated reconciliation accepted by Tony on 2026-08-06; RM-028–RM-031 UI discovery capture and Medium priorities approved by Tony on 2026-08-11; RM-027 implementation, independent-review disposition, handoff correction, and Implemented-state roadmap reconciliation approved by Tony on 2026-08-12
-**Last Updated:** 2026-08-12
+**Approval Source:** Pull Request #13 merged by Tony on 2026-08-02; RM-024 priority and dependency order approved by Tony on 2026-08-04; RM-027 approved by Tony on 2026-08-04; RM-001–RM-005 closeout authorized and accepted by Tony on 2026-08-04; RM-014 closure and RM-024 evidence acceptance directed by Tony on 2026-08-05; RM-025 validation execution approved by Tony, PASS evidence returned, and Validated reconciliation accepted by Tony on 2026-08-06; RM-028–RM-031 UI discovery capture and Medium priorities approved by Tony on 2026-08-11; RM-027 implementation, independent-review disposition, handoff correction, and Implemented-state roadmap reconciliation approved by Tony on 2026-08-12; RM-032 High-priority Major proposal capture and governance review approved by Tony on 2026-08-22, with implementation authorization explicitly withheld
+**Last Updated:** 2026-08-22
 **Created:** 2026-07-13  
 **Scope:** EENOS operating model, workflow improvements, runtime improvements, governance refinements, and future enhancements
 
@@ -81,6 +81,7 @@ The Review Queue, when used, remains the place for formal proposals and approval
 - RM-029 - Visual Story Architecture Workspace
 - RM-030 - Scene Development Workspace
 - RM-031 - Session History, Checkpoint, and Recovery Interface
+- RM-032 - EENOS Scene Knowledge and Provenance Layer
 
 ## Roadmap vs Review Queue
 
@@ -176,6 +177,7 @@ Do not interrupt creative flow for minor remarks unless the statement clearly id
 | RM-029 | Visual Story Architecture Workspace | Medium | Major | User Experience / Story Architecture | Provide a visual workspace for navigating and authoring relationships among story, book, act, chapter, narrative thread, character, and scene structures. | Discovered | 2026-08-11 | Tony identified missing user-interface roadmap coverage during roadmap review | Tony | Future | RM-024; RM-025; RM-028 | Capture only; no delivery approval or visualization technology is implied. The workspace should expose governed Story Architecture relationships and approval states without weakening exact-reference persistence, canon boundaries, recovery behavior, or author control. |
 | RM-030 | Scene Development Workspace | Medium | Major | User Experience / Scene Development | Provide a user-facing scene-development workspace for governed SDR content, optional prompts, save and recovery state, compliance visibility, and scene-specific workflow without requiring direct Markdown editing. | Discovered | 2026-08-11 | Tony identified missing user-interface roadmap coverage during roadmap review | Tony | Future | RM-001–RM-005; RM-016; RM-027; RM-028; related RM-029 | Capture only; no delivery approval or form technology is implied. Optional RM-027 prompts must remain optional, multiline, and non-gating. The interface must preserve deterministic save, recovery, validation, and information-state rules. |
 | RM-031 | Session History, Checkpoint, and Recovery Interface | Medium | Major | User Experience / Runtime Recovery | Provide a user-facing interface for browsing sessions and checkpoints, understanding recovery readiness and warnings, selecting a valid recovery source, and resuming work safely. | Discovered | 2026-08-11 | Tony identified missing user-interface roadmap coverage during roadmap review | Tony | Future | RM-007; RM-008; RM-010; RM-023; RM-028 | Capture only; no delivery approval or storage design is implied. The interface must expose validation and blocking outcomes, preserve source checkpoints, avoid ambiguous active-runtime state, and distinguish binary recovery success from future fidelity or audit findings. |
+| RM-032 | EENOS Scene Knowledge and Provenance Layer | High | Major | Story Intelligence / Scene Development / Information Management | Provide a local, reproducible scene-centered knowledge layer that links scene-development evidence through stable identity and exact provenance, preserves current and historical alternatives and information boundaries, reports ambiguity and conflict, and generates traceable Scene Hubs without replacing source documents. | Proposal | 2026-08-22 | Scene Knowledge Database planning intake covering fragmented G1 and N2 evidence | Tony | Future | `200-roadmap/backlog/RM-032-EENOS-Scene-Knowledge-and-Provenance-Layer-Planning-Proposal.md`; RM-001; RM-016; RM-024; RM-025; RM-028–RM-030 | Tony approved High-priority Major proposal capture and governance review on 2026-08-22. Initial pilot is read-only and limited to G1 and N2. Implementation, permanent scene-ID format, SQLite, Scene Hub artifact classification, repository placement, standards amendments, and source writeback remain unapproved. |
 
 ## Current Recommendation
 
