@@ -1,12 +1,12 @@
 # Repository Contract — Software Repository (eenos-software-development)
 
 **Document ID:** RC-006
-**Version:** 1.0.1
+**Version:** 1.1.0
 **Status:** Approved — operational
 **Document Owner:** Repository Steward
 **Approval Authority:** Tony
-**Approval Source:** Approved directly by Tony on 2026-08-06 following independent Organization Model Consultant review under RCR-003.
-**Last Updated:** 2026-08-06
+**Approval Source:** Approved directly by Tony on 2026-08-06 following independent Organization Model Consultant review under RCR-003 (v1.0.1 baseline). Section 4 amendment (v1.1.0) approved by Tony following Organization Model Consultant independent review, Recommend Approval; Tony approval recorded 2026-08-22 (RCR-006).
+**Last Updated:** 2026-08-22
 
 ---
 
@@ -22,7 +22,7 @@ Every existing Repository Contract (RC-001–RC-005) governs a location *inside*
 |---|---|
 | Contract ID | RC-006 |
 | Repository Path | GitHub: `tjlatimer/eenos-software-development` (all branches); Local development root: `H:\Development\EENOS`, per RM-026 (Validated — Interface Cutover Pending) |
-| Version | 1.0.1 |
+| Version | 1.1.0 |
 | Status | Approved — operational |
 
 ## 2. Ownership
@@ -59,6 +59,17 @@ Based on the repository structure observed as of 2026-08-06 (this repository has
 - `stabilization/` — frozen baseline snapshots
 - Root-level governance/release documents (`GOV_*.md`, `STD_*.md`, `RELEASE_*.md`, `README.md`, `Start-EENOS.ps1`, `requirements-wp01.txt`)
 
+**Added 2026-08-22 (v1.1.0), supporting RM-032 pilot planning:**
+
+- Scene identity registry — generated/operational data; recommended within `tools/` pending Delivery Lead's implementation-ready design.
+- Source-document manifest — generated/operational data; recommended within `tools/` pending same.
+- Provenance fragments — generated/operational data; recommended within `tools/` pending same.
+- Conflict/review queue — generated/operational data; recommended within `tools/` pending same.
+- Derived query store (e.g., SQLite or equivalent) — generated/operational data; recommended within `tools/` pending same.
+- Scanner state and logs — generated/operational data; recommended within `98_Workflow/` (existing "workflow reports, runtime checkpoints" category) or `tools/`, pending same.
+
+All six are owned by the Implementation Engineer under the existing Section 3 permission model (write only under an approved Task Package, on an isolated branch/worktree). Exact leaf subfolder names are deferred to Delivery Lead's implementation-ready design; Repository Steward confirms compliance before first write. "Tests and implementation code" for this same pilot were determined to already be covered by the existing `tools/` category and required no amendment.
+
 **Explicitly out of scope / not governed by this contract:** `.codex-work/`, `.codex/`, `.agents/`, `.pytest_cache/`, and any other untracked, non-ignored local scratch content. These require a separate Repository Steward disposition (provenance review, and either formal adoption or removal) before being treated as governed artifacts. See Repository Steward Finding F5 (2026-08-06 compliance determination).
 
 ## 5. Governing Documents
@@ -81,6 +92,7 @@ Repository validation for this location shall verify:
 - No commit, branch creation, push, or Pull Request is performed by any role other than the Repository Committer; no merge is performed without Tony's authority.
 - No new dependency, framework, storage design, or interface technology is introduced without corresponding governing-document authorization.
 - `.codex-work/` and other untracked local-scratch content is not cited as evidence of repository compliance until it receives a separate authorized disposition.
+- For the six artifact types added in v1.1.0: exact leaf subfolder placement is confirmed by Repository Steward against Delivery Lead's implementation-ready design before first write.
 
 ## 7. Exceptions
 
@@ -94,3 +106,4 @@ None at this time.
 |---|---|---|
 | 1.0.0 (Draft) | 2026-08-06 | Initial draft prepared by Repository Steward to resolve the RM-027 blocking gap identified in the RM-027 Repository Contract and Target Branch Exception Package. Not yet reviewed or approved. |
 | 1.0.1 | 2026-08-06 | Organization Model Consultant independent review completed (Recommend Approval, no blocking revisions). Applied the one optional wording revision to Section 3 so the merge-authority sentence no longer cites GOV-005 as current authority for a repository GOV-005 does not yet name. Tony approval recorded. Status moved to Approved and the contract was made operational by Repository Committer publication. |
+| 1.1.0 | 2026-08-22 | Added six controlled-artifact types to Section 4 (scene identity registry, source-document manifest, provenance fragments, conflict/review queue, derived query store, scanner state/logs) to support RM-032 pilot planning. Repository Steward drafted (RCR-006); Organization Model Consultant independent review completed (Recommend Approval); Tony approval recorded 2026-08-22. GOV-005 open dependency (Section 3) remains outstanding and unresolved by this amendment. |
