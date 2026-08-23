@@ -4,7 +4,7 @@
 
 **Roadmap ID:** RM-032
 
-**Status:** Proposal
+**Status:** Closed
 
 **Priority:** High
 
@@ -16,9 +16,9 @@
 
 **Prepared Date:** 2026-08-22
 
-**Approval Source:** Tony approved proposal capture and governance review on 2026-08-22
+**Approval Source:** Tony approved proposal capture and governance review, explicitly authorized delivery and implementation on 2026-08-22, and confirmed completion and closure on 2026-08-23
 
-**Implementation Authority:** Not granted
+**Implementation Authority:** Granted by Tony on 2026-08-22, subject to the scope, repository contracts, authority gates, and stop conditions in the RM-032 Planning Handoff Package
 
 ## Planning Determination
 
@@ -110,14 +110,12 @@ Critical risks are silent information loss, author/POV/reader leakage, canon or 
 
 ## Planning Blockers
 
-- Governance and artifact-classification review is not complete.
-- No approved scene identity and provenance standard was found.
-- Exact repository placement and Scene Hub vault eligibility remain unresolved.
-- The authoritative fragment-state mapping is unresolved.
-- The current source-controlled SDR standard location/version requires reconciliation.
-- The exact G1 and N2 pilot source manifests have not been verified.
-- SQLite and the permanent scene-ID format remain unapproved.
+- RCR-006 and RC-006/RC-009 establish the repository and vault contract baseline; exact RC-006 leaf placement remains a Delivery Lead and Repository Steward determination.
+- No approved scene identity and provenance standard was found; the Delivery Lead must prepare the implementation-ready authority/schema package and route any approval required before dependent writes.
+- Scene Hub vault publication remains gated by RC-009 write-authority assignment and exact destination approval; this does not block non-vault Stage A implementation.
+- The exact G1 and N2 pilot source manifests must be verified before scanning.
+- Derived-store technology and permanent scene-ID format remain implementation-design decisions subject to the approved acceptance and authority boundaries.
 
 ## Current Disposition
 
-Tony approved RM-032 as a High-priority Major proposal and authorized governance review on 2026-08-22. This approval does not authorize delivery or implementation. The next governed step is independent Organization Model Consultant review, followed by Roadmap Manager reconciliation and a separate Tony delivery decision.
+Tony approved RM-032 as a High-priority Major proposal, authorized governance review, and directed implementation on 2026-08-22. Tony confirmed RM-032 complete and authorized closure on 2026-08-23 after AC-001–AC-019 passed, independent review concluded with no findings, focused adversarial validation passed 48/48, software PR #8 merged exactly 23 authorized files at merge commit `92024344574d6d946f15503adae9ecd49ca9e389`, and vault preservation was confirmed across 637 entries with no changes. RM-032 is Closed. No source-document mutation, canon promotion, automatic conflict resolution, or vault write was authorized. Scene Hub vault publication remains a separately gated stage under RC-009 until Tony assigns write authority and approves the exact destination.
