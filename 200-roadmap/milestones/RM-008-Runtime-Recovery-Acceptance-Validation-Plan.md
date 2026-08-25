@@ -1,7 +1,7 @@
 ---
 Document ID: RM-008-VAL-PLAN
 Title: RM-008 Runtime Recovery and Session Resume Acceptance Validation Plan
-Version: 0.2.0
+Version: 0.3.0
 Status: Ready for Validation Authorization
 Owner: Roadmap Manager
 Approver: Tony
@@ -39,7 +39,8 @@ This plan validates deterministic selection, eligibility, reconstruction, verifi
 ## Who Does What
 
 - **Tony:** chooses the checkpoint for the owner demonstration, confirms the recovered mission and work context, and accepts or rejects the result.
-- **Validation Facilitator:** creates disposable good and bad checkpoints, runs commands, simulates missing files or competing choices, and captures evidence.
+- **Delivery Manager:** creates the governed validation assignment, confirms isolation and dependencies, and coordinates any blocker or repair route.
+- **Implementation Engineer:** creates disposable good and bad checkpoints, runs commands, simulates missing files or competing choices, and captures evidence.
 - **Independent Reviewer:** verifies the evidence and disposition after execution.
 
 Tony is not expected to edit checkpoint files, damage stored data, create ambiguous databases, or diagnose program output.
@@ -48,14 +49,14 @@ Tony is not expected to edit checkpoint files, damage stored data, create ambigu
 
 ### Step 1 — Receive the recovery sandbox
 
-1. The facilitator identifies a disposable folder named `RM-008-Validation-Run-<date>`.
+1. The Implementation Engineer identifies a disposable folder named `RM-008-Validation-Run-<date>`.
 2. The folder must contain copies or synthetic checkpoints only. Tony confirms that the live vault and production checkpoint store are outside the folder.
-3. The facilitator records the tested software commit and hashes each input checkpoint.
+3. The Implementation Engineer records the tested software commit and hashes each input checkpoint.
 4. If this isolation cannot be demonstrated, stop with `BLOCKED`.
 
 ### Step 2 — Prove that the existing recovery tests work
 
-The facilitator runs this from the software-repository root:
+The Implementation Engineer runs this from the software-repository root:
 
 ```powershell
 python -m unittest tools.tests.test_runtime_recovery -v
@@ -66,8 +67,8 @@ Tony checks the final summary for zero failures and errors. Save the full output
 ### Step 3 — Recover one known session
 
 1. Tony selects the provided valid sample checkpoint.
-2. Before recovery, the facilitator shows Tony its mission, mode, session ID, and working-document references.
-3. The facilitator runs the approved recovery command or interface against that exact checkpoint.
+2. Before recovery, the Implementation Engineer shows Tony its mission, mode, session ID, and working-document references.
+3. The Implementation Engineer runs the approved recovery command or interface against that exact checkpoint.
 4. Tony compares the recovered display with the values shown before recovery.
 5. The recovered mission, mode, work context, and source-checkpoint ID must match. A new recovery-attempt or resumed-session ID is expected.
 6. Tony confirms that warnings are visible and that the source checkpoint has not changed.
@@ -75,37 +76,37 @@ Tony checks the final summary for zero failures and errors. Save the full output
 
 ### Step 4 — Try a missing and a damaged checkpoint
 
-1. The facilitator requests a checkpoint ID that does not exist.
+1. The Implementation Engineer requests a checkpoint ID that does not exist.
 2. Tony verifies that recovery says `Blocked` and does not start a runtime.
-3. The facilitator makes a copy of a valid checkpoint, changes one required value, and attempts recovery from the copy.
+3. The Implementation Engineer makes a copy of a valid checkpoint, changes one required value, and attempts recovery from the copy.
 4. Tony verifies that integrity failure blocks recovery.
-5. The facilitator proves that the original checkpoint is byte-for-byte unchanged.
+5. The Implementation Engineer proves that the original checkpoint is byte-for-byte unchanged.
 6. Save the inputs and outputs as `03-blocking-cases`.
 
 ### Step 5 — Test an ambiguous choice
 
-1. The facilitator prepares two equally eligible checkpoints with the same selection priority.
-2. The facilitator starts recovery without naming either one.
+1. The Implementation Engineer prepares two equally eligible checkpoints with the same selection priority.
+2. The Implementation Engineer starts recovery without naming either one.
 3. Tony verifies that the system asks for a choice or blocks. It must not silently choose.
 4. Tony then explicitly selects one checkpoint and confirms that the recovery record names that exact source.
 
 ### Step 6 — Test fallback and failure stages
 
-1. The facilitator requests a damaged or ineligible checkpoint while an older eligible checkpoint exists.
+1. The Implementation Engineer requests a damaged or ineligible checkpoint while an older eligible checkpoint exists.
 2. If fallback is not authorized, recovery must block.
 3. If the test explicitly authorizes fallback, Tony verifies that both the rejected checkpoint and selected fallback are named and the reason appears as a warning.
-4. The facilitator separately simulates reconstruction failure and control-transfer failure.
+4. The Implementation Engineer separately simulates reconstruction failure and control-transfer failure.
 5. Tony verifies that the result distinguishes those stages and never leaves an unexplained active runtime.
 
 ### Step 7 — Compare recovery with a normal start
 
-1. The facilitator starts a fresh RM-010 session using the same mission, mode, and governed context as the recovered session.
+1. The Implementation Engineer starts a fresh RM-010 session using the same mission, mode, and governed context as the recovered session.
 2. Tony compares the two Session Headers using a supplied side-by-side table.
 3. The governed working state must be equivalent; recovery-specific IDs and provenance may differ and must be disclosed.
 
 ### Step 8 — Record the decision
 
-The facilitator maps all evidence to AC-001 through AC-016. Every AC must have a plain-language result, evidence filename, and PASS/FAIL/BLOCKED mark. Tony rejects any aggregate PASS that conceals an individual failure.
+The Implementation Engineer maps all evidence to AC-001 through AC-016. Every AC must have a plain-language result, evidence filename, and PASS/FAIL/BLOCKED mark. Tony rejects any aggregate PASS that conceals an individual failure.
 
 ## Acceptance Tests
 
