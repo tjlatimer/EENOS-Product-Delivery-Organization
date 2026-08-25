@@ -1,7 +1,7 @@
 ---
 Document ID: RM-010-VAL-PLAN
 Title: RM-010 AI Runtime Startup Manager Acceptance Validation Plan
-Version: 0.1.0
+Version: 0.2.0
 Status: Ready for Validation Authorization
 Owner: Roadmap Manager
 Approver: Tony
@@ -36,6 +36,75 @@ This plan validates RM-010 startup and re-entry behavior. The related `DEF-RM-01
 - Freeze deployed artifact versions and hashes for each governed host/project surface.
 - Use clean sessions without inherited mission or mode context for cold-start scenarios.
 - Record boot identity, trigger, state transitions, dependencies, capabilities, loaded context, warnings, diagnostics, Session Header, and control-transfer result.
+
+## Who Does What
+
+- **Tony:** types the ordinary startup phrases, answers mission/mode questions, confirms what appears, and decides acceptance.
+- **Validation Facilitator:** opens clean sessions on each required surface, prepares missing-capability/dependency simulations, runs technical regressions, and records evidence.
+- **Independent Reviewer:** checks the completed matrix and confirms that failures were not hidden or repaired during review.
+
+Tony does not install files, edit prompts, remove real dependencies, or interpret Python/PowerShell diagnostics.
+
+## Step-by-Step Owner Test
+
+### Step 1 — Confirm deployment before testing
+
+1. The facilitator gives Tony a one-page deployment table naming every required project/surface, deployed artifact version, and hash.
+2. Each required row must say `DEPLOYED` and match the approved Start EENOS package.
+3. The Organization Model Consultant disposition and Tony approval must be attached.
+4. If any row is missing, proposed-only, or hash-mismatched, record `BLOCKED — deployment incomplete`; do not claim RM-010 validation.
+
+### Step 2 — Run the technical baseline
+
+The facilitator runs from the software-repository root:
+
+```powershell
+python -m unittest tools.tests.test_runtime_startup_manager -v
+```
+
+If the supported environment uses PowerShell startup regression scripts, the facilitator also runs the approved repository command and records it verbatim. Tony checks only that the summary contains zero failures or errors.
+
+### Step 3 — Perform a clean ordinary start on every required surface
+
+For each row of the four-project matrix:
+
+1. The facilitator opens a new clean chat/session with no inherited EENOS mission or mode.
+2. Tony types `START EENOS`.
+3. The expected response begins governed startup or asks for the required mission/mode information. It must not route the request to Delivery Manager or another unrelated role.
+4. Tony supplies a harmless mission: `Validate EENOS startup without changing story files.`
+5. When asked, Tony selects a supported mode listed by the runtime.
+6. Tony confirms that the resulting header clearly states mission, mode, capabilities, dependencies, context, recovery decision, warnings, validation result, working set, and destination runtime.
+7. The facilitator saves the entire transcript and marks that surface PASS or FAIL.
+
+### Step 4 — Test missing or invalid information
+
+In separate clean sessions Tony performs these simple tests:
+
+1. Type `START EENOS`, then provide an incomplete mission. The system must ask for missing information or block rather than guess silently.
+2. Request a made-up mode such as `MODE: NOT-A-REAL-MODE`. The system must explain the valid correction or block.
+3. Ask to begin a mission for which the facilitator has made one required test dependency unavailable in the sandbox. The system must block before handoff and name what is missing.
+4. Repeat with an optional dependency unavailable. The system may continue only if the limitation is visibly disclosed.
+
+The facilitator, not Tony, creates the safe missing-dependency conditions.
+
+### Step 5 — Test recovery routing
+
+1. Start a clean mission that does not need recovery. Tony verifies that the header says recovery is not required or not selected.
+2. Start the prepared recovery-required scenario. The system must use RM-008 and must not begin normal runtime work if recovery fails.
+3. Capture both transcripts.
+
+### Step 6 — Test controlled changes after startup
+
+Using a disposable active session:
+
+1. Tony changes the mission. The current runtime should pause while startup checks the new mission and issues a revised header or blocking message.
+2. Tony requests a different valid mode. The system should recheck what the new mode requires before transferring control.
+3. The facilitator simulates loss of a required capability. Tony verifies that work stops or follows an explicitly approved degraded path; it must not continue silently.
+4. The facilitator simulates a failed re-entry. Tony verifies that the result explains whether the old valid session can resume or must remain suspended.
+
+### Step 7 — Record the decision
+
+The facilitator completes one AC-001 through AC-018 sheet per required surface plus one combined matrix. RM-010 cannot pass unless every required surface passes and `DEF-RM-010-001` has no unresolved blocking finding.
 
 ## Acceptance Tests
 

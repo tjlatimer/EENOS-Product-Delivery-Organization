@@ -1,7 +1,7 @@
 ---
 Document ID: RM-017-VAL-PLAN
 Title: RM-017 AI Capability Schema Acceptance Validation Plan
-Version: 0.1.0
+Version: 0.2.0
 Status: Ready for Validation Authorization
 Owner: Roadmap Manager
 Approver: Tony
@@ -33,6 +33,77 @@ This plan validates the schema contract, records, evaluation logic, freshness, d
 - Define each tested requirement before capability availability is evaluated.
 - Record provider metadata separately from capability evidence.
 - Include positive, negative, stale-state, and cross-provider-equivalence fixtures.
+
+## Who Does What
+
+- **Tony:** reviews the capability cards in plain language, chooses which capabilities the sample mission requires, and confirms the visible pass/warn/block decisions.
+- **Validation Facilitator:** prepares test capability records, runs automated tests, changes timestamps/states in disposable fixtures, and captures consumer results.
+- **Independent Reviewer:** checks that provider names never substituted for evidence and verifies the final AC matrix.
+
+Tony is not expected to edit schemas, JSON, timestamps, or provider adapters.
+
+## Step-by-Step Owner Test
+
+### Step 1 — Receive plain-language capability cards
+
+1. The facilitator supplies a table with one row per test capability and these columns: `What the system can do`, `Required for this mission?`, `Current state`, `Evidence`, `Checked at`, `Limitation`, and `Expected decision`.
+2. Tony selects a harmless sample mission and confirms which listed abilities are genuinely required versus optional.
+3. The facilitator records that requirement decision before running availability checks. This prevents the test from changing requirements to force a PASS.
+
+### Step 2 — Run the existing automated tests
+
+The facilitator runs from the software-repository root:
+
+```powershell
+python -m unittest tools.tests.test_runtime_capabilities -v
+```
+
+Tony checks the final summary for zero failures and errors. Save the full output as `01-existing-capability-tests.txt`.
+
+### Step 3 — Demonstrate the five capability states
+
+The facilitator presents five disposable records one at a time:
+
+1. **Available:** Tony verifies that a required capability may pass when current evidence says it works.
+2. **Unavailable:** Tony verifies that a required capability blocks unless an approved alternative exists.
+3. **Conditional:** Tony verifies that the condition is written plainly and the capability passes only when the condition is true.
+4. **Unknown:** Tony verifies that the system does not pretend the capability exists.
+5. **Not applicable:** Tony verifies that it closes only an irrelevant check and does not satisfy a required ability.
+
+For every record, save the input card and resulting decision side by side.
+
+### Step 4 — Demonstrate required, optional, alternative, and degraded decisions
+
+1. Mark one available capability Required; confirm PASS.
+2. Mark one unavailable capability Required; confirm BLOCK.
+3. Mark that same capability Optional; confirm the result is a warning or disclosed omission rather than a false required PASS.
+4. Provide two approved alternatives, one unavailable and one available; confirm the result names the alternative that satisfied the need.
+5. Run a prepared degraded-path case; confirm that its authority, limitation, scope, and review/expiration condition are visible.
+
+### Step 5 — Prove provider names do not decide capability
+
+1. The facilitator shows two fixtures with different provider names but identical capability evidence.
+2. Tony verifies that the operational decisions are the same.
+3. The facilitator then shows two fixtures with the same provider name but different capability evidence.
+4. Tony verifies that the decisions follow the evidence and differ where appropriate.
+5. Any result based only on `ChatGPT`, `Claude`, `Ollama`, or another provider name is a FAIL.
+
+### Step 6 — Test stale and changing information
+
+1. The facilitator changes the check time on a required capability so it is older than the permitted freshness window.
+2. Tony verifies that the system rechecks it or warns/blocks; it must not silently accept stale evidence.
+3. In a disposable active session, the facilitator changes a required capability from Available to Unavailable.
+4. Tony verifies that the proper startup re-entry, checkpoint, or recovery behavior occurs and the change is visible.
+
+### Step 7 — Show the same evidence to all three consumers
+
+1. The facilitator submits the same frozen capability record to RM-007, RM-008, and RM-010 test harnesses.
+2. Tony receives a three-column comparison explaining the checkpoint, recovery, and startup decisions.
+3. Differences are permitted only when each consumer's requirement is different and that requirement is shown.
+
+### Step 8 — Record the decision
+
+The facilitator maps the demonstrations and automated results to AC-001 through AC-018. Every row names its evidence file. RM-017 fails if provider identity substitutes for evidence or if an unknown, unavailable, invalid, or stale required capability silently passes.
 
 ## Acceptance Tests
 
