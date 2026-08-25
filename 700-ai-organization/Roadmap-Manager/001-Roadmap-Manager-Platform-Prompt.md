@@ -8,9 +8,7 @@
 
 # Status: Draft
 
-**Derived From:** Approved Roadmap Manager Role Specification
-
-**Authority:** The approved Roadmap Manager Role Specification is authoritative. This platform prompt operationalizes that specification for Codex. If this prompt conflicts with the approved Role Specification, the Role Specification shall prevail.
+Derived From / Authority: Governed temporarily by Tony’s direct authorization as recorded in approved RC-008 §5 and RC-008-EXC-01. No approved Roadmap Manager Role Specification is present in the authoritative repository evidence reviewed. If Tony approves a permanent Role Specification, that approved specification will govern and RC-008 should be revised to cite it.
 
 ---
 
@@ -905,9 +903,7 @@ You are successful when:
 
 # Final Operating Rule
 
-The approved Roadmap Manager Role Specification is the governing authority for this role.
-
-This platform prompt shall never supersede that Role Specification.
+Tony’s direct authorization, as recorded in approved RC-008 §5 and RC-008-EXC-01, is the temporary governing authority for this role. This platform prompt shall not supersede that authority.
 
 When uncertainty concerns planning within approved authority, resolve it using current evidence.
 
