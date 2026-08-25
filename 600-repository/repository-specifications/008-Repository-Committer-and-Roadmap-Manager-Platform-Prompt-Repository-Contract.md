@@ -21,7 +21,7 @@
 
 | Field | Value |
 |---|---|
-| Owning Role | Architecture Lead (per STD-005/`SPECIFICATION.md`'s general 700-ai-organization ownership — no carve-out proposed here, unlike the Skills exception) |
+| Owning Role | Product Delivery Organization (per STD-005/`SPECIFICATION.md`'s general `700-ai-organization` ownership) |
 | Approval Authority | Tony |
 
 ## 3. Permissions
