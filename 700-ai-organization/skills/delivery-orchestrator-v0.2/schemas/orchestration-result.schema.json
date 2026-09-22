@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eenos.local/schemas/orchestration-result-0.1.json",
+  "type": "object",
+  "required": ["schema_version", "run_id", "task_id", "invocation_id", "attempt", "role", "phase", "status", "requires_tony", "authorization", "payload"],
+  "properties": {
+    "schema_version": { "enum": ["0.1", "0.2"] },
+    "run_id": { "type": "string", "minLength": 1 },
+    "task_id": { "type": "string", "minLength": 1 },
+    "invocation_id": { "type": "string", "minLength": 1 },
+    "attempt": { "type": "integer", "minimum": 1 },
+    "role": { "enum": ["roadmap_manager", "delivery_manager", "repository_committer", "implementation_engineer", "independent_reviewer", "delivery_advisor"] },
+    "phase": { "type": "string", "minLength": 1 },
+    "status": { "enum": ["completed", "blocked", "failed", "cancelled"] },
+    "requires_tony": { "type": "boolean" },
+    "authorization": {
+      "type": "object",
+      "required": ["reference", "scope_hash"],
+      "properties": {
+        "reference": { "type": "string", "minLength": 1 },
+        "scope_hash": { "type": "string", "minLength": 1 },
+        "worktree_creation_authorized": { "type": "boolean" }
+      }
+    },
+    "repository": { "type": ["object", "null"] },
+    "payload": {
+      "type": "object",
+      "required": ["format", "path"],
+      "properties": {
+        "format": { "type": "string", "minLength": 1 },
+        "path": { "type": "string", "minLength": 1 }
+      }
+    },
+    "blocker": {
+      "type": ["object", "null"],
+      "properties": {
+        "code": { "type": "string" },
+        "required_capability": { "type": "string" },
+        "resume_role": { "type": "string" },
+        "resume_token": { "type": "string" },
+        "retryable": { "type": "boolean" }
+      }
+    },
+    "evidence": { "type": "array" },
+    "advisor": { "type": ["object", "null"] },
+    "delivery_assignment": { "type": ["object", "null"] }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "schema_version":"0.1","run_id":"unit-run","task_id":"RM-TEST-001","invocation_id":"inv-001","attempt":1,"role":"delivery_manager","phase":"delivery_readiness","status":"completed","requires_tony":false,
+  "authorization":{"reference":"prototype-acceptance-authorization","scope_hash":"sha256:test-scope-v1","worktree_creation_authorized":true},
+  "payload":{"format":"implementation-handoff-package","path":"packages/inv-001.md"},"evidence":[]
+}
