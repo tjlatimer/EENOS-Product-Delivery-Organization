@@ -1,11 +1,11 @@
 # EENOS Product Roadmap
 
 **Document ID:** RM-000  
-**Version:** 1.16.0
+**Version:** 1.17.0
 **Status:** Approved  
 **Document Owner:** Roadmap Manager  
 **Approval Authority:** Tony  
-**Approval Source:** Pull Request #13 merged by Tony on 2026-08-02; RM-024 priority and dependency order approved by Tony on 2026-08-04; RM-027 approved by Tony on 2026-08-04; RM-001–RM-005 closeout authorized and accepted by Tony on 2026-08-04; RM-014 closure and RM-024 evidence acceptance directed by Tony on 2026-08-05; RM-025 validation execution approved by Tony, PASS evidence returned, and Validated reconciliation accepted by Tony on 2026-08-06; RM-028–RM-031 UI discovery capture and Medium priorities approved by Tony on 2026-08-11; RM-027 implementation, independent-review disposition, handoff correction, and Implemented-state roadmap reconciliation approved by Tony on 2026-08-12; RM-027 AC-012 runtime synchronization and complete-active-set evaluation approved by Tony and returned PASS on 2026-08-13; RM-026 closure approved by Tony on 2026-08-13; RM-001–RM-006 and RM-011 closure approved by Tony on 2026-08-13; RM-032 delivery and implementation authorized by Tony on 2026-08-22; RM-032 completion and closure confirmed by Tony on 2026-08-23; RM-018 delivery approved by Tony, software Pull Request #9 merged by Tony, Product Delivery Pull Request #35 merged by Tony, and lifecycle closure directed by Tony on 2026-08-23; RM-034–RM-037 discovery capture, story craft additions, and High/Major planning classifications approved by Tony on 2026-09-22
+**Approval Source:** Pull Request #13 merged by Tony on 2026-08-02; RM-024 priority and dependency order approved by Tony on 2026-08-04; RM-027 approved by Tony on 2026-08-04; RM-001–RM-005 closeout authorized and accepted by Tony on 2026-08-04; RM-014 closure and RM-024 evidence acceptance directed by Tony on 2026-08-05; RM-025 validation execution approved by Tony, PASS evidence returned, and Validated reconciliation accepted by Tony on 2026-08-06; RM-028–RM-031 UI discovery capture and Medium priorities approved by Tony on 2026-08-11; RM-027 implementation, independent-review disposition, handoff correction, and Implemented-state roadmap reconciliation approved by Tony on 2026-08-12; RM-027 AC-012 runtime synchronization and complete-active-set evaluation approved by Tony and returned PASS on 2026-08-13; RM-026 closure approved by Tony on 2026-08-13; RM-001–RM-006 and RM-011 closure approved by Tony on 2026-08-13; RM-032 delivery and implementation authorized by Tony on 2026-08-22; RM-032 completion and closure confirmed by Tony on 2026-08-23; RM-018 delivery approved by Tony, software Pull Request #9 merged by Tony, Product Delivery Pull Request #35 merged by Tony, and lifecycle closure directed by Tony on 2026-08-23; RM-034–RM-037 discovery capture, story craft additions, and High/Major planning classifications approved by Tony on 2026-09-22; RM-038 discovery capture, multi-tier logging architecture, and High/Major planning classification approved by Tony on 2026-09-22
 **Last Updated:** 2026-09-22
 **Created:** 2026-07-13  
 **Scope:** EENOS operating model, workflow improvements, runtime improvements, governance refinements, and future enhancements
@@ -90,6 +90,7 @@ The Review Queue, when used, remains the place for formal proposals and approval
 - RM-035 - Embedded World Revelation Craft Diagnostic
 - RM-036 - Thematic Resonance and Philosophical Stress-Tester
 - RM-037 - Multi-Thread Dramatic Irony and Reveal Convergence Engine
+- RM-038 - Multi-Tier Audit and Change Logging Engine
 
 ## Roadmap vs Review Queue
 
@@ -415,6 +416,18 @@ All four capabilities are advisory, evidence-backed, intent-aware, provider-neut
 - **Dependencies:** `08_Narrative` registries (Revelation, Mystery, Arc, POV); RM-024 Story Architecture; RM-029 Visual Story Architecture Workspace; RM-032 Scene Knowledge Layer; RM-034 Governed Epistemic Horizon Engine.
 - **Recommended next step:** Prepare a planning proposal defining the dramatic irony model, multi-POV timeline sync contracts, and convergence metrics.
 
+### RM-038 — Multi-Tier Audit and Change Logging Engine
+
+- **Classification:** Major Infrastructure / Governance
+- **Priority:** High
+- **Status:** Proposal
+- **Problem / rationale:** Sustaining a multi-year creative endeavor alongside an evolving AI-assisted development platform requires full auditability of author-AI decisions, lore modifications, and system enhancements. Without unified provenance: (1) conversational decisions and prompt interactions are lost in ephemeral chat sessions, (2) creative changes across Obsidian vault files lack an immutable, human-readable change ledger, and (3) software changes across EENOS tooling risk divergent release histories.
+- **Intended outcome:** A unified, three-tier provenance and change-logging system: Tier 1 captures interactive author sessions in dual Markdown/JSON records outside narrative core; Tier 2 maintains an append-only audit ledger at `98_Workflow/VAULT_CHANGELOG.md` inside the Obsidian vault; Tier 3 standardizes governed `CHANGELOG.md` maintenance following Keep a Changelog / SemVer across EENOS software repositories.
+- **Scope:** Chat session archival schemas (Session ID, timestamp, model provider & version, operational mode, author decisions, and SDR references); automated generation of `98_Workflow/VAULT_CHANGELOG.md` recording file additions, edits, deletions, canon promotions, and SDR lifecycle changes with author rationale; automated software changelog maintenance tied to PR merges and release gates.
+- **Non-goals:** Storing raw AI chat logs inside the narrative novel vault (forbidden by canon-purity rule); imposing intrusive paperwork during creative flow; automated rewriting or prescriptive change gating.
+- **Dependencies:** `98_Workflow/VAULT_CHANGELOG.md`; `GOV-002`; `GOV-005`; RM-001–RM-005 Scene Development Record; RM-012 Runtime Artifact Synchronization; RM-032 Scene Knowledge and Provenance Layer.
+- **Recommended next step:** Formulate the session logging schema, vault change ledger format, and automated software changelog hooks in a formal planning proposal.
+
 ### Initiative relationships
 
 ```text
@@ -514,3 +527,4 @@ Use this template for new items:
 | 2026-08-23 | Reconciled completed RM-018 implementation, validation, independent review, publication, and merge evidence. Promoted RM-018 from Approved to Validated after 55 focused publication tests and 56 final implementation validation tests passed, Independent Review 005 returned no findings and Recommend Approval, and Tony merged software PR #9 as `29f6391ca9b3428311eb9000b03855cc7a62274b`. Preserved the pre-existing RFC8785 mismatch and three sandbox-only runtime/launcher failures as unrelated non-blocking limitations. Closed was not inferred. | Roadmap Manager |
 | 2026-08-23 | Tony merged Product Delivery PR #35 at `242c01cff6c083a96b829c3818484e614b180ff6`, accepted the RM-018 Validated reconciliation, and directed closure. Promoted RM-018 from Validated to Closed while preserving all validation evidence, the pre-existing RFC8785 mismatch, and the three sandbox-only runtime/launcher limitations. No successor delivery item was inferred or approved. | Tony |
 | 2026-09-22 | Captured RM-034 through RM-037 as Universe-Native Story Craft and Story Intelligence initiatives approved by Tony: Governed Epistemic Horizon Engine, Embedded World Revelation Craft Diagnostic, Thematic Resonance and Philosophical Stress-Tester, and Multi-Thread Dramatic Irony and Reveal Convergence Engine. Prepared planning proposals under `200-roadmap/backlog/`. | Tony |
+| 2026-09-22 | Captured RM-038 Multi-Tier Audit and Change Logging Engine (Chat Session Logging, Vault Change Log, and Software Change Log) approved by Tony. Bumped roadmap to v1.17.0 and prepared planning proposal under `200-roadmap/backlog/`. | Tony |
