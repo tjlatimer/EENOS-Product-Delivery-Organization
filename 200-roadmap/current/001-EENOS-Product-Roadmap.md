@@ -1,12 +1,12 @@
 # EENOS Product Roadmap
 
 **Document ID:** RM-000  
-**Version:** 1.15.0
+**Version:** 1.16.0
 **Status:** Approved  
 **Document Owner:** Roadmap Manager  
 **Approval Authority:** Tony  
-**Approval Source:** Pull Request #13 merged by Tony on 2026-08-02; RM-024 priority and dependency order approved by Tony on 2026-08-04; RM-027 approved by Tony on 2026-08-04; RM-001–RM-005 closeout authorized and accepted by Tony on 2026-08-04; RM-014 closure and RM-024 evidence acceptance directed by Tony on 2026-08-05; RM-025 validation execution approved by Tony, PASS evidence returned, and Validated reconciliation accepted by Tony on 2026-08-06; RM-028–RM-031 UI discovery capture and Medium priorities approved by Tony on 2026-08-11; RM-027 implementation, independent-review disposition, handoff correction, and Implemented-state roadmap reconciliation approved by Tony on 2026-08-12; RM-027 AC-012 runtime synchronization and complete-active-set evaluation approved by Tony and returned PASS on 2026-08-13; RM-026 closure approved by Tony on 2026-08-13; RM-001–RM-006 and RM-011 closure approved by Tony on 2026-08-13; RM-032 delivery and implementation authorized by Tony on 2026-08-22; RM-032 completion and closure confirmed by Tony on 2026-08-23; RM-018 delivery approved by Tony, software Pull Request #9 merged by Tony, Product Delivery Pull Request #35 merged by Tony, and lifecycle closure directed by Tony on 2026-08-23
-**Last Updated:** 2026-08-23
+**Approval Source:** Pull Request #13 merged by Tony on 2026-08-02; RM-024 priority and dependency order approved by Tony on 2026-08-04; RM-027 approved by Tony on 2026-08-04; RM-001–RM-005 closeout authorized and accepted by Tony on 2026-08-04; RM-014 closure and RM-024 evidence acceptance directed by Tony on 2026-08-05; RM-025 validation execution approved by Tony, PASS evidence returned, and Validated reconciliation accepted by Tony on 2026-08-06; RM-028–RM-031 UI discovery capture and Medium priorities approved by Tony on 2026-08-11; RM-027 implementation, independent-review disposition, handoff correction, and Implemented-state roadmap reconciliation approved by Tony on 2026-08-12; RM-027 AC-012 runtime synchronization and complete-active-set evaluation approved by Tony and returned PASS on 2026-08-13; RM-026 closure approved by Tony on 2026-08-13; RM-001–RM-006 and RM-011 closure approved by Tony on 2026-08-13; RM-032 delivery and implementation authorized by Tony on 2026-08-22; RM-032 completion and closure confirmed by Tony on 2026-08-23; RM-018 delivery approved by Tony, software Pull Request #9 merged by Tony, Product Delivery Pull Request #35 merged by Tony, and lifecycle closure directed by Tony on 2026-08-23; RM-034–RM-037 discovery capture, story craft additions, and High/Major planning classifications approved by Tony on 2026-09-22
+**Last Updated:** 2026-09-22
 **Created:** 2026-07-13  
 **Scope:** EENOS operating model, workflow improvements, runtime improvements, governance refinements, and future enhancements
 
@@ -86,6 +86,10 @@ The Review Queue, when used, remains the place for formal proposals and approval
 - RM-029 - Visual Story Architecture Workspace
 - RM-030 - Scene Development Workspace
 - RM-031 - Session History, Checkpoint, and Recovery Interface
+- RM-034 - Governed Epistemic Horizon Engine
+- RM-035 - Embedded World Revelation Craft Diagnostic
+- RM-036 - Thematic Resonance and Philosophical Stress-Tester
+- RM-037 - Multi-Thread Dramatic Irony and Reveal Convergence Engine
 
 ## Roadmap vs Review Queue
 
@@ -182,6 +186,10 @@ Do not interrupt creative flow for minor remarks unless the statement clearly id
 | RM-030 | Scene Development Workspace | Medium | Major | User Experience / Scene Development | Provide a user-facing scene-development workspace for governed SDR content, optional prompts, save and recovery state, compliance visibility, and scene-specific workflow without requiring direct Markdown editing. | Discovered | 2026-08-11 | Tony identified missing user-interface roadmap coverage during roadmap review | Tony | Future | RM-001–RM-005; RM-016; RM-027; RM-028; related RM-029 | Capture only; no delivery approval or form technology is implied. Optional RM-027 prompts must remain optional, multiline, and non-gating. The interface must preserve deterministic save, recovery, validation, and information-state rules. |
 | RM-031 | Session History, Checkpoint, and Recovery Interface | Medium | Major | User Experience / Runtime Recovery | Provide a user-facing interface for browsing sessions and checkpoints, understanding recovery readiness and warnings, selecting a valid recovery source, and resuming work safely. | Discovered | 2026-08-11 | Tony identified missing user-interface roadmap coverage during roadmap review | Tony | Future | RM-007; RM-008; RM-010; RM-023; RM-028 | Capture only; no delivery approval or storage design is implied. The interface must expose validation and blocking outcomes, preserve source checkpoints, avoid ambiguous active-runtime state, and distinguish binary recovery success from future fidelity or audit findings. |
 | RM-032 | EENOS Scene Knowledge and Provenance Layer | High | Major | Story Intelligence / Scene Development / Information Management | Provide a local, reproducible scene-centered knowledge layer that links scene-development evidence through stable identity and exact provenance, preserves current and historical alternatives and information boundaries, reports ambiguity and conflict, and generates traceable Scene Hubs without replacing source documents. | Closed | 2026-08-22 | Scene Knowledge Database planning intake covering fragmented G1 and N2 evidence | Tony | Current pilot | `200-roadmap/backlog/RM-032-EENOS-Scene-Knowledge-and-Provenance-Layer-Planning-Proposal.md`; `300-delivery/active/RM-032/RM-032-Scene-Knowledge-and-Provenance-Layer-Planning-Handoff-Package.md`; software PR #8; implementation commit `79f509818c2f042158d4aaa9cce2d022b8afa303`; merge commit `92024344574d6d946f15503adae9ecd49ca9e389`; orchestration audit `RM-032-20260823-001`; Trello card `8RSxlIrI`; RC-006 v1.1.0; RC-009 v1.0.0; RM-001; RM-016; RM-024; RM-025; RM-028–RM-030 | Closed by Tony on 2026-08-23 after completion of the authorized read-only G1/N2 pilot. AC-001–AC-019 passed; independent review concluded with no findings; focused adversarial validation passed 48/48; exactly 23 authorized files merged through software PR #8; and vault preservation was confirmed across 637 entries with no changes. Prior planning and implementation history is preserved. Closure does not authorize the separately gated Stage B vault publication, source mutation, canon promotion, or automatic conflict resolution. |
+| RM-034 | Governed Epistemic Horizon Engine | High | Major | Story Intelligence / Narrative Integrity | Enforce character-specific knowledge boundaries, partial understanding, and false beliefs across chronological scene beats; protect Hidden Canon and prevent omniscient bleed and premature revelation leaks. | Discovered | 2026-09-22 | Tony identified need to safeguard character perspective limits, prevent early reveal leaks (Sumi/Noah connection), and enforce epistemic friction in multi-POV drafting | Tony | Future | `200-roadmap/backlog/RM-034-Governed-Epistemic-Horizon-Engine-Planning-Proposal.md`; `AUTHOR ONLY - Hidden Canon.md`; `EWR-ASYMMETRY`; RM-021; RM-025; RM-032 | Author-controlled epistemic firewall. Evaluates drafted internal monologues and dialogue against character knowledge state. Prevents AI or authorial omniscient bleed. |
+| RM-035 | Embedded World Revelation Craft Diagnostic | High | Major | Story Intelligence / Craft Diagnostic | Audit drafted prose against Tony's five Embedded World Revelation (EWR) techniques (Contextual Friction, Loaded Dialogue, POV Filtering, Historical Residue, Asymmetry Ladder) to eliminate exposition blocks and ensure lore is revealed solely through character obstacle and collision. | Discovered | 2026-09-22 | Tony approved EWR diagnostic addition to audit scenes against native Evolution Earth worldbuilding laws | Tony | Future | `200-roadmap/backlog/RM-035-Embedded-World-Revelation-Craft-Diagnostic-Planning-Proposal.md`; `Embedded World Revelation (EWR).md`; RM-019; RM-021 | Native craft diagnostic. Flags ungrounded lore dumps, tests POV-specific perception lenses (systems vs perception management vs somatic tells), and verifies dialogue raises questions rather than answering them. |
+| RM-036 | Thematic Resonance and Philosophical Stress-Tester | High | Major | Story Intelligence / Thematic Governance | Stress-test scenes and character arcs against the Evolution Earth philosophical commitments ("What deserves to survive?", earned knowledge, competing identities over simple good vs evil, individual cost of progress). | Discovered | 2026-09-22 | Tony approved addition to protect universe philosophy and prevent generic moral tropes or unearned character breakthroughs | Tony | Future | `200-roadmap/backlog/RM-036-Thematic-Resonance-and-Philosophical-Stress-Tester-Planning-Proposal.md`; `PHIL_Evolution_Earth.md`; RM-019; RM-021 | Advisory philosophical diagnostic. Detects unearned knowledge, simplistic moral melodrama, and victories lacking individual biological or moral cost. |
+| RM-037 | Multi-Thread Dramatic Irony and Reveal Convergence Engine | Medium-High | Major | Story Intelligence / Story Architecture | Track the dramatic irony gap between reader awareness and character knowledge across Gabriel, Noah, and Sumitra threads; model revelation velocity and multi-POV narrative convergence toward climax. | Discovered | 2026-09-22 | Tony approved addition to orchestrate multi-POV revelation pacing and dramatic tension across Book 1 and series storylines | Tony | Future | `200-roadmap/backlog/RM-037-Multi-Thread-Dramatic-Irony-and-Reveal-Convergence-Planning-Proposal.md`; `08_Narrative` registries; RM-024; RM-029; RM-032; RM-034 | Dynamic multi-POV tension model. Tracks the reader awareness gap across converging POV threads to maximize dramatic payoff without prematurely deflating core mysteries. |
 
 ## Current Recommendation
 
@@ -359,16 +367,72 @@ All four capabilities are advisory, evidence-backed, intent-aware, provider-neut
 - **Dependencies:** RM-020; RM-016; RM-007; RM-008; RM-010; RM-017; Writers Room structure-only governance; canon promotion and approval rules.
 - **Recommended next step:** Draft a proposal covering the drafting-layer contract, configuration, transitions, protected decisions, unresolved questions, prose authorization, provider-neutral dispatch, artifact classification, and checkpoint/recovery integration.
 
+### RM-034 — Governed Epistemic Horizon Engine
+
+- **Classification:** Major Enhancement
+- **Priority:** High
+- **Status:** Proposal
+- **Problem / rationale:** *Evolution Earth* is built on dramatic tension driven by characters who are emotionally right but factually incomplete or wrong (e.g. Gabriel believing Athena experimented on Sumitra, Sumitra believing she was rescued by KAO, Noah unaware that his birth displaced Sumitra). When drafting across multi-POV storylines over extended periods, there is an acute risk of omniscient bleed, accidental early lore leaks, or violations of the strict rule that certain connections (such as Sumi/Noah) must only be orbited and never named in Book 1.
+- **Intended outcome:** An author-controlled epistemic firewall that tracks what each POV character knows, what they falsely believe, and what they are strictly forbidden from knowing at any chronological scene beat, auditing drafts against character knowledge boundaries.
+- **Scope:** Chronological knowledge-state mapping by character; distinction between verified fact, false belief, suspicion, and forbidden truth; epistemic boundary auditing on internal monologue and dialogue; detection of premature revelation leaks or omniscient leakage; advisory-only reporting with zero prose modification.
+- **Non-goals:** Restricting author creative freedom, automatic rewriting of character dialogue, or forcing omniscient narrators into first-person constraints.
+- **Dependencies:** `AUTHOR ONLY - Hidden Canon.md`; `[EWR-ASYMMETRY]`; RM-021 Layered Drafting; RM-025 Governed Character Identity; RM-032 Scene Knowledge and Provenance.
+- **Recommended next step:** Formulate the epistemic state schema and character boundary audit contracts in a formal planning proposal.
+
+### RM-035 — Embedded World Revelation Craft Diagnostic
+
+- **Classification:** Major Enhancement
+- **Priority:** High
+- **Status:** Proposal
+- **Problem / rationale:** Generic editorial critique tools evaluate pacing and grammar but fail to evaluate the universe-native craft philosophy of *Evolution Earth*: *"If the world doesn't interfere with what a character wants, it doesn't get explained."* Without specialized diagnostics, prose risks falling into static exposition blocks or generic dialogue.
+- **Intended outcome:** Automated craft diagnostic evaluating drafted scenes against Tony Latimer's five native Embedded World Revelation (EWR) techniques: Contextual Friction (`[EWR-FRICTION]`), Loaded Dialogue (`[EWR-DIALOGUE]`), POV Filtering (`[EWR-POV-FILTER]`), Historical Residue (`[EWR-RESIDUE]`), and the Asymmetry Ladder (`[EWR-ASYMMETRY]`).
+- **Scope:** Detection of ungrounded exposition blocks; verification that world rules and technology (BuilderBots, DCOP, decanting, energy states) appear as obstacles to character goals; POV filtering validation (e.g., Noah observing systems and connection gaps, Gabriel observing perception management, Sumi observing somatic/physical tension); loaded dialogue auditing ensuring lines raise questions rather than answer them; advisory diagnostics only.
+- **Non-goals:** Scoring, letter grades, mandatory checklist enforcement, or automated prose generation.
+- **Dependencies:** `Embedded World Revelation (EWR).md`; RM-019 Genre Intelligence Framework; RM-021 Layered Drafting Pipeline.
+- **Recommended next step:** Draft a planning proposal defining the EWR diagnostic indicators, POV filter rules, and advisory report format.
+
+### RM-036 — Thematic Resonance and Philosophical Stress-Tester
+
+- **Classification:** Major Enhancement
+- **Priority:** High
+- **Status:** Proposal
+- **Problem / rationale:** Evolution Earth investigates the core governing question *"What deserves to survive?"* through five foundational philosophical commitments (earned knowledge, non-fixed humanity, competing identities rather than good vs evil, individual responsibility, and transformation carrying real individual cost). Standard writing tools lack philosophical awareness, risking tropes such as simplistic moral melodrama or unearned breakthroughs.
+- **Intended outcome:** An advisory diagnostic that stress-tests scenes, character arcs, and institutional conflicts against the foundational philosophical commitments in `PHIL_Evolution_Earth.md`.
+- **Scope:** Identification of unearned epiphanies or knowledge (violating "Knowledge is earned, not given"); moral complexity evaluation ensuring antagonists act from coherent competing survival conceptions; individual cost accounting verifying that breakthroughs or technological progress carry genuine biological, psychological, or relational price tags; advisory reporting only.
+- **Non-goals:** Prescriptive philosophy enforcement, rigid thematic formulas, or moralizing story content.
+- **Dependencies:** `PHIL_Evolution_Earth.md`; RM-019 Genre Intelligence Framework; RM-021 Layered Drafting Pipeline.
+- **Recommended next step:** Prepare a planning proposal defining the philosophical evaluation criteria and cost-accounting diagnostic models.
+
+### RM-037 — Multi-Thread Dramatic Irony and Reveal Convergence Engine
+
+- **Classification:** Major Enhancement
+- **Priority:** Medium-High
+- **Status:** Proposal
+- **Problem / rationale:** *Evolution Earth* weaves multiple major narrative threads (Gabriel's search and exile, Noah's awakening and connection to *The We*, Sumitra's life inside the Church of KAO). Maximizing emotional resonance requires managing the dramatic irony gap—what the reader understands from observing all threads versus what individual characters understand—and timing the convergence of these threads toward the climax.
+- **Intended outcome:** A multi-POV narrative modeling capability that tracks the reader awareness curve, measures revelation velocity across threads, and projects dramatic tension toward structural collision points across Book 1 and series storylines.
+- **Scope:** Multi-POV timeline alignment; tracking the Reader Awareness Gap (dramatic irony delta between reader and POV characters); revelation pacing and cadence analysis; convergence point forecasting; warning on premature climax deflation or narrative stagnation; advisory visualization data only.
+- **Non-goals:** Imposing a commercial three-act template, altering scene chronology automatically, or forcing linear convergence.
+- **Dependencies:** `08_Narrative` registries (Revelation, Mystery, Arc, POV); RM-024 Story Architecture; RM-029 Visual Story Architecture Workspace; RM-032 Scene Knowledge Layer; RM-034 Governed Epistemic Horizon Engine.
+- **Recommended next step:** Prepare a planning proposal defining the dramatic irony model, multi-POV timeline sync contracts, and convergence metrics.
+
 ### Initiative relationships
 
 ```text
 RM-018 Story Rhythm and Pacing Intelligence
     ↓
 RM-019 Genre Intelligence Framework
+    ↓
+RM-035 Embedded World Revelation Craft Diagnostic
 
 RM-020 Structured Revision Framework
     ↓
 RM-021 Layered Drafting Pipeline
+    ↓
+RM-034 Governed Epistemic Horizon Engine
+    ↓
+RM-036 Thematic Resonance and Philosophical Stress-Tester
+    ↓
+RM-037 Multi-Thread Dramatic Irony and Reveal Convergence Engine
 ```
 
 RM-018 supplies general pacing analysis; RM-019 adds genre-aware expectations and comparison models. RM-020 defines controlled revision operations; RM-021 organizes story development and drafting into configurable layers and may route completed material into RM-020 operations. All four should share evidence, intent, capability, artifact-classification, and author-approval concepts where appropriate.
@@ -449,3 +513,4 @@ Use this template for new items:
 | 2026-08-23 | Tony selected and approved RM-018 Story Rhythm and Pacing Intelligence for delivery after RM-032 closure. Promoted RM-018 from Proposal to Approved, designated it as the current delivery item, and prepared its Planning Handoff Package for Delivery Manager orchestration. RM-015 and RM-022 retain their existing roadmap states and scope. | Tony |
 | 2026-08-23 | Reconciled completed RM-018 implementation, validation, independent review, publication, and merge evidence. Promoted RM-018 from Approved to Validated after 55 focused publication tests and 56 final implementation validation tests passed, Independent Review 005 returned no findings and Recommend Approval, and Tony merged software PR #9 as `29f6391ca9b3428311eb9000b03855cc7a62274b`. Preserved the pre-existing RFC8785 mismatch and three sandbox-only runtime/launcher failures as unrelated non-blocking limitations. Closed was not inferred. | Roadmap Manager |
 | 2026-08-23 | Tony merged Product Delivery PR #35 at `242c01cff6c083a96b829c3818484e614b180ff6`, accepted the RM-018 Validated reconciliation, and directed closure. Promoted RM-018 from Validated to Closed while preserving all validation evidence, the pre-existing RFC8785 mismatch, and the three sandbox-only runtime/launcher limitations. No successor delivery item was inferred or approved. | Tony |
+| 2026-09-22 | Captured RM-034 through RM-037 as Universe-Native Story Craft and Story Intelligence initiatives approved by Tony: Governed Epistemic Horizon Engine, Embedded World Revelation Craft Diagnostic, Thematic Resonance and Philosophical Stress-Tester, and Multi-Thread Dramatic Irony and Reveal Convergence Engine. Prepared planning proposals under `200-roadmap/backlog/`. | Tony |
