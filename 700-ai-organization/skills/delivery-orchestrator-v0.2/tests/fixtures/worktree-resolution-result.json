@@ -1,0 +1,5 @@
+{
+  "schema_version":"0.1","run_id":"unit-run","task_id":"RM-TEST-001","invocation_id":"inv-004","attempt":1,"role":"repository_committer","phase":"blocker_resolution","status":"completed","requires_tony":false,
+  "authorization":{"reference":"prototype-acceptance-authorization","scope_hash":"sha256:test-scope-v1","worktree_creation_authorized":true},
+  "payload":{"format":"worktree-resolution-evidence","path":"packages/inv-004.md"},"evidence":[]
+}

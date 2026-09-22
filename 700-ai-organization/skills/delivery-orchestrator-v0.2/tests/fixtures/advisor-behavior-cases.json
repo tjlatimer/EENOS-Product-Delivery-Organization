@@ -1,0 +1,13 @@
+[
+  {"id":"worktree_authorized","description":"Missing worktree with explicit creation authority","expected_disposition":"DIRECT_ROUTE","before_tony":0,"after_tony":0,"expected_state":"resolving_blocker"},
+  {"id":"rm032_untracked","description":"Pre-existing untracked RM-032 artifacts with unresolved ownership","expected_disposition":"TONY_DECISION","before_tony":1,"after_tony":1,"expected_state":"awaiting_tony"},
+  {"id":"prior_authorization","description":"Audit shows Tony already authorized exact condition","expected_disposition":"RESUME_INTERRUPTED_ROLE","before_tony":1,"after_tony":0,"expected_state":"resume_interrupted_role"},
+  {"id":"governance_metadata_loop","description":"Repeated non-blocking governance metadata request","expected_disposition":"LOOP_STOP","before_tony":1,"after_tony":0,"expected_state":"implementation_engineer"},
+  {"id":"build_failure_exhausted","description":"Build failure after reasonable in-scope repair","expected_disposition":"TONY_DECISION","before_tony":1,"after_tony":1,"expected_state":"awaiting_tony"},
+  {"id":"missing_repository_evidence","description":"Repository Committer may gather missing evidence read-only","expected_disposition":"GATHER_EVIDENCE","before_tony":1,"after_tony":0,"expected_state":"repository_committer"},
+  {"id":"unsafe_delete_ambiguous","description":"Deletion proposed for ambiguous pre-existing files","expected_disposition":"STOP_UNSAFE","before_tony":1,"after_tony":1,"expected_state":"awaiting_tony"},
+  {"id":"unsafe_route_evidence_available","description":"Unsafe mutation stopped but evidence can be gathered safely","expected_disposition":"STOP_UNSAFE","before_tony":1,"after_tony":0,"expected_state":"repository_committer"},
+  {"id":"scope_conflict","description":"Conflict between authoritative requirements","expected_disposition":"TONY_DECISION","before_tony":1,"after_tony":1,"expected_state":"awaiting_tony"},
+  {"id":"reviewer_defect","description":"Reviewer returns actionable implementation defect","expected_disposition":"ROUTE_EXISTING_ROLE","before_tony":1,"after_tony":0,"expected_state":"implementation_engineer"},
+  {"id":"repeated_identical_blocker","description":"Identical blocker repeats without new evidence","expected_disposition":"LOOP_STOP","before_tony":1,"after_tony":0,"expected_state":"loop_stopped"}
+]

@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.1",
+  "roles": {
+    "roadmap_manager": {
+      "skill": "H:\\CODEX\\visualizations\\2026\\08\\11\\019fefa8-6b80-7441-808e-f398430d4e18\\eenos-roadmap-manager\\SKILL.md",
+      "skill_sha256": "d269056e69c5c21da7382e45380423f0b024c6ecfba733140655677713f6fe88",
+      "platform_prompt_sha256": "0853e27eb0d2241ee835f904194cad662f57cf3fe128c5b7e6c464abf34b43a8",
+      "adapter": "references/roadmap-manager-adapter.md",
+      "capabilities": ["roadmap_state_verify", "delivery_assignment", "planning_evidence", "planning_clarification"]
+    },
+    "delivery_manager": {
+      "skill": "H:\\CODEX\\skills\\delivery-manager\\SKILL.md",
+      "capabilities": ["delivery_readiness", "handoff_package"]
+    },
+    "repository_committer": {
+      "skill": "H:\\CODEX\\skills\\repository-committer\\SKILL.md",
+      "capabilities": ["repository_preflight", "branch_create", "repository_worktree_create", "git_evidence"]
+    },
+    "implementation_engineer": {
+      "skill": "H:\\CODEX\\skills\\implementation-engineer\\SKILL.md",
+      "capabilities": ["implementation", "build", "test", "repair"]
+    },
+    "independent_reviewer": {
+      "skill": "H:\\CODEX\\skills\\.system\\review-agent\\SKILL.md",
+      "governance_status": "provisional_host_reference_no_approved_role_contract",
+      "capabilities": ["read_only_review"]
+    },
+    "delivery_advisor": {
+      "skill": "H:\\CODEX\\skills\\delivery-advisor\\SKILL.md",
+      "capabilities": ["exception_analysis", "escalation_challenge", "loop_detection"]
+    }
+  },
+  "routes": {
+    "WORKTREE_REQUIRED": {
+      "capability": "repository_worktree_create",
+      "role": "repository_committer",
+      "resume_role": "implementation_engineer"
+    }
+  }
+}

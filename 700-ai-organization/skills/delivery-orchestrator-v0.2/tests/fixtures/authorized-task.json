@@ -1,0 +1,11 @@
+{
+  "task_id": "RM-TEST-001",
+  "authorization": {
+    "reference": "prototype-acceptance-authorization",
+    "scope_hash": "sha256:test-scope-v1",
+    "worktree_creation_authorized": true,
+    "limits": ["temporary local fixture only", "no remote", "no push", "no pull request", "no merge"]
+  },
+  "objective": "Add one line containing orchestrated=true to fixture.txt.",
+  "authorized_paths": ["fixture.txt"]
+}
