@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eenos.local/schemas/delivery-assignment-0.2.json",
+  "type": "object",
+  "required": ["roadmap_item_id", "authoritative_source", "verified_state", "approval_references", "delivery_increment", "objective", "expected_outcome", "in_scope", "out_of_scope", "dependencies", "planning_evidence", "governing_references", "delivery_manager_access", "planning_handoff_path"],
+  "properties": {
+    "roadmap_item_id": {"type":"string","pattern":"^RM-[0-9]+$"},
+    "authoritative_source": {"type":"string","minLength":1},
+    "verified_state": {"type":"string","minLength":1},
+    "approval_references": {"type":"array","minItems":1},
+    "delivery_increment": {"type":"string","minLength":1},
+    "objective": {"type":"string","minLength":1},
+    "expected_outcome": {"type":"string","minLength":1},
+    "in_scope": {"type":"array","minItems":1},
+    "out_of_scope": {"type":"array"},
+    "dependencies": {"type":"array"},
+    "planning_evidence": {"type":"array","minItems":1},
+    "governing_references": {"type":"array"},
+    "delivery_manager_access": {"type":"array"},
+    "planning_handoff_path": {"type":"string","minLength":1}
+  }
+}

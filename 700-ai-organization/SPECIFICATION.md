@@ -1,9 +1,9 @@
 ---
 Document ID: FOLDER-700-AI-ORGANIZATION
 Title: 700-ai-organization Folder Specification
-Version: 0.1.0
+Version: 0.2.0
 Status: Draft
-Owner: Architecture Lead
+Owner: Product Delivery Organization
 Approver: Tony
 Created: 2026-07-31
 Last Updated: 2026-07-31
@@ -22,7 +22,7 @@ Contains role specifications, GPT prompts, validation checklists, and independen
 
 ## Owner
 
-Architecture Lead
+Product Delivery Organization
 
 ## Allowed subfolders
 
@@ -30,9 +30,11 @@ Architecture Lead
 - `Delivery-Lead/`
 - `Architecture-Lead/`
 - `Implementation-Engineer/`
+- `Repository-Committer/`
 - `Documentation-and-Knowledge-Manager/`
 - `Repository-Steward/`
 - `Standards-Manager/`
+- `skills/` — Shared Skill location; owned by Repository Steward per STD-005 exception. See STD-005 § 700-ai-organization.
 
 ## Allowed artifact types
 

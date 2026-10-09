@@ -1,0 +1,8 @@
+{
+  "schema_version": "0.2",
+  "authoritative_source": "H:\\EENOS Organizational\\Delivery Orchestrator v0.2 Proposed",
+  "skill_root": "H:\\CODEX\\skills\\delivery-orchestrator-v0.2",
+  "runs_root": "H:\\CODEX\\runtime\\delivery-orchestrator-v0.2\\runs",
+  "resume_policy": "new-v0.2-runs-only",
+  "v0.1_runtime": "H:\\CODEX\\runtime\\delivery-orchestrator"
+}

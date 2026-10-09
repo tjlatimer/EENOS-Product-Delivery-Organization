@@ -1,9 +1,11 @@
 # Taxonomy and Glossary
 
 **Document ID:** STD-001  
-**Version:** 1.0.1  
+**Version:** 1.1.0  
 **Status:** Approved  
-**Document Owner:** Product Delivery Organization
+**Document Owner:** Product Delivery Organization  
+**Related Repository Change Request:** RCR-004  
+**Last Updated:** 2026-08-16
 
 ---
 
@@ -80,3 +82,11 @@ Any required updates shall be submitted as a Repository Change Request.
 All organizational documentation uses a consistent, approved vocabulary.
 
 This glossary remains the authoritative source for organizational terminology used throughout the Product Delivery Organization.
+
+---
+
+# Revision History
+
+| Version | Date | Change | Approved By |
+|---|---|---|---|
+| 1.1.0 | 2026-08-16 | Added "Skill" and "Plugin" as governed artifact types per RCR-004. | Tony |

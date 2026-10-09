@@ -1,9 +1,10 @@
 # Folder Structure Specification
 
 **Document ID:** STD-005  
-**Version:** 1.0.1  
+**Version:** 1.1.0  
 **Status:** Approved  
-**Document Owner:** Product Delivery Organization
+**Document Owner:** Product Delivery Organization  
+**Related Repository Change Request:** RCR-005
 
 ---
 
@@ -284,6 +285,8 @@ Every visual record shall identify:
 **Purpose:** Stores AI role specifications, prompts, validation checklists, and review records.
 
 Each role shall have one approved folder.
+
+**Exception — Shared Skill Location.** In addition to per-role folders, `700-ai-organization/skills/` is an approved shared subfolder for governed Skill artifacts referenced by more than one role's `AGENTS.md`. Each Skill occupies its own named subfolder (e.g., `skills/start-eenos/`). Permitted content within a Skill folder: the Skill artifact itself, supporting reference files it directly requires, version history, and review record. This subfolder is owned by the Repository Steward, distinct from the per-role folders' general `700-ai-organization` ownership, per the child-governance precedent established by RC-003/RC-004.
 
 Approved role folders shall contain only:
 

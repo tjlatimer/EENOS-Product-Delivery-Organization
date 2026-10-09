@@ -1,9 +1,11 @@
 # Review Authority Matrix
 
 **Document ID:** GOV-002  
-**Version:** 1.0.0  
+**Version:** 1.1.0  
 **Status:** Approved  
-**Document Owner:** Product Delivery Organization
+**Document Owner:** Product Delivery Organization  
+**Related Repository Change Request:** RCR-004  
+**Last Updated:** 2026-08-16
 
 ---
 
@@ -41,6 +43,8 @@ The objective is to ensure every significant organizational decision receives in
 | Organizational Policies | Yes | Product Delivery Organization | Organization Model Consultant |
 | Task Package Specification | Yes | Product Delivery Organization | Organization Model Consultant |
 | Repository Contract | Yes | Product Delivery Organization | Organization Model Consultant |
+| Skill | Yes | Delivery Lead | Organization Model Consultant |
+| Plugin | Yes | Delivery Lead | Organization Model Consultant |
 | Repository Change Request | Yes | Repository Steward | Organization Model Consultant |
 | Taxonomy & Glossary | No* | — | — |
 | Repository README | No | — | — |
@@ -132,6 +136,8 @@ Repository Steward shall review this matrix whenever:
 - A repository standard is added or removed.
 
 Any required updates shall be submitted as a Repository Change Request.
+
+2026-08-16: Added "Skill" and "Plugin" rows following RCR-004 approval (new governed artifact types introduced). Owning Role recorded as Delivery Lead, consistent with role-specific precedent (cf. "Repository Change Request" row).
 
 ---
 
